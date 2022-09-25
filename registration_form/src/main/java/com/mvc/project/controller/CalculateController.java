@@ -1,6 +1,7 @@
 package com.mvc.project.controller;
 
 import com.mvc.project.dto.Calculateform;
+import com.mvc.project.dto.Calculateoutput;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,8 +22,10 @@ public class CalculateController {
 
         @PostMapping("/calculate")
         public String greetingSubmit(@ModelAttribute Calculateform calc, Model model) {
-            model.addAttribute("calculate", calc );
-            return "calculateresult";
+            Calculateoutput calculateoutput= new Calculateoutput();
+            int outputview=calculateoutput.getNumber1()+calculateoutput.getNumber2();
+            model.addAttribute("outputview", outputview );
+            return "outputview";
         }
     }
 }
