@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class PersonController {
     @GetMapping("/greeting")
     public String greetingForm(Model model) {
-        model.addAttribute("registration", new Registration());
+        Registration registration = new Registration();
+        registration.setName("selva");
+        model.addAttribute("registration",  registration);
         return "registrationForm";
     }
 
