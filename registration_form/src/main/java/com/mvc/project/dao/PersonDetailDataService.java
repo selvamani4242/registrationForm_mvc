@@ -1,7 +1,11 @@
-package com.mvc.project.dto;
+package com.mvc.project.dao;
+
+import com.mvc.project.dto.PersonDetail;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class PersonDetailDataService {
 
 
