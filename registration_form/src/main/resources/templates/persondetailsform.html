@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<h1>Enter Number.</h1>
+
+<form action="#" th:action="@{persondetail}" th:object="${showpersondetail}" method="post">
+
+    <p>Enter Number: <input id="num" type="text" th:field="*{num}"/></p>
+
+    <p><input type="submit" value="Submit"/>
+
+</form>
+</body>
+</html>
